@@ -91,4 +91,10 @@ class CommunicationListSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+# class ChatSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = ChatModel
+#         fields = ('id', "sender", "reciver", "message", "is_read", "date_created")
+        
+
 

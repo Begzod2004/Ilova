@@ -4,7 +4,7 @@ from .views import (
     RegionViewset,
     DistrictViewset,
     CategoryViewset,
-    CommunicationViewSet
+    CommunicationViewSet,
 )
 
 router = DefaultRouter()
@@ -16,6 +16,9 @@ router.register('communication', CommunicationViewSet, 'communication')
 
 urlpatterns = [
     path('', include(router.urls)),
+
+    # path('chat/list/', ChatListView.as_view()),
+    # path('chat/create/', ChatCreateView.as_view()),
 
 ]
 

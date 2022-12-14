@@ -41,6 +41,7 @@ urlpatterns += [
     # local urls
     path('account/', include('apps.account.api.urls')),
     path('contact/', include('apps.contact.api.urls')),
+    path('chat/', include('apps.chat.api.urls')),
 ]
 
 if settings.DEBUG:

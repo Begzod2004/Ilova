@@ -57,19 +57,25 @@ INSTALLED_APPS = [
     # local apps
     'apps.account.apps.AccountConfig',
     'apps.contact.apps.ContactConfig',
+    'apps.chat.apps.ChatConfig',
 ]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         # 'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.TokenAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
 }
+
+
+LOCAL_BASE_URL = 'http://127.0.0.1:8000'
+PROD_BASE_URL = 'http://ilova.pythonanywhere.com/'
+
 MIDDLEWARE = [
+
     "django.middleware.security.SecurityMiddleware",
-    
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -307,15 +313,15 @@ JAZZMIN_SETTINGS = {
         {"model": "auth.User"},
 
         # App with dropdown menu to all its models pages (Permissions checked against models)
-        {"app": "books"},
+        # {"app": "books"},
 
 
-        {"model": "apps.about_company"},
-        {"model": "apps.order"},
-        {"model": "apps.blog"},
-        {"model": "apps.contact"},
-        {"model": "apps.blog"},
-        {"model": "apps.objects"},
+        # {"model": "apps.about_company"},
+        # {"model": "apps.order"},  
+        # {"model": "apps.blog"},
+        # {"model": "apps.contact"},
+        # {"model": "apps.blog"},
+        # {"model": "apps.objects"},
     ],
     
     #############

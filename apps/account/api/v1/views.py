@@ -25,6 +25,7 @@ class EnterPhoneNumberView(generics.GenericAPIView):
 
 
     def post(self, request, *args, **kwargs):
+        print(111, request.data)
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
         user_data = serializer.data

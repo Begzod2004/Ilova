@@ -27,6 +27,7 @@ class CodeVerificationSerializer(serializers.ModelSerializer):
         phone = attrs.get('phone')
         # user = authenticate(phone=phone)
         user = Account.objects.get(phone = phone)
+        user.activ_code = '12345'     #must delete
         if not user:
             raise AuthenticationFailed({
                 'message': 'Email or password is not correct'

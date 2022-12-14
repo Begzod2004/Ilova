@@ -152,7 +152,7 @@ class SMSClient:
     
     def get_sms_client_token(self) -> str:
         """This method returns token from database"""
-        token = None
+        # token = None
         try:
             token: str = sms_model.objects.only('token').last().token
               
@@ -163,7 +163,7 @@ class SMSClient:
             # }
             # telebot.send_message(**context)
             self._auth()
-        print(token)
+        # print(token)
         return token
     
 
